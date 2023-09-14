@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "AdShield",
+    "version": "2.0.0",
+    "description": "Makes your surfing ad-free and safe!",
+    "host_permissions": ["<all_urls>"],
+    "permissions": [
+        "tabs", 
+        "storage"
+    ], 
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "background.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
